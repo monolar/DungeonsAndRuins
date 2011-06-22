@@ -12,10 +12,10 @@ import org.bukkit.event.block.BlockListener;
 
 public class DungeonsAndRuinsPluginBlockListener extends BlockListener {
 	@SuppressWarnings("unused")
-	private final DungeonsAndRuinsPlugin plugin;
+	private final DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin;
 
-    public DungeonsAndRuinsPluginBlockListener(final DungeonsAndRuinsPlugin plugin) {
-        this.plugin = plugin;
+    public DungeonsAndRuinsPluginBlockListener(final DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin) {
+        this.dungeonsAndRuinsPlugin = dungeonsAndRuinsPlugin;
     }
     
     

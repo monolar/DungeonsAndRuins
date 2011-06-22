@@ -14,10 +14,10 @@ public class DungeonsAndRuinsPluginBlockPopulator extends BlockPopulator {
     public void populate(World world, Random random, Chunk source) {
         System.out.println("Mono populating chunk at " + source.getX() + " " + source.getZ());
         BlockVector brickVector = new BlockVector(
-                source.getX(),
+                source.getX() << 4,
                 0,
-                source.getZ());
-        brickVector.multiply(16); // yeah << 4 would work on every component as well. meh.
+                source.getZ() << 4);
+        // TODO find a way to ignore trees?
         brickVector.setY(world.getHighestBlockYAt((int)brickVector.getX(), (int)brickVector.getZ()));
 
         System.out.println(" ... " + brickVector.toString());

@@ -9,11 +9,11 @@ import org.bukkit.event.world.WorldListener;
 
 public class DungeonsAndRuinsPluginWorldListener extends WorldListener {
     @SuppressWarnings("unused")
-    private final DungeonsAndRuinsPlugin plugin;
+    private final DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin;
     private final DungeonsAndRuinsPluginBlockPopulator populator = new DungeonsAndRuinsPluginBlockPopulator();
     
-    public DungeonsAndRuinsPluginWorldListener(final DungeonsAndRuinsPlugin plugin) {
-        this.plugin = plugin;
+    public DungeonsAndRuinsPluginWorldListener(final DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin) {
+        this.dungeonsAndRuinsPlugin = dungeonsAndRuinsPlugin;
     }
     
     @Override

@@ -6,10 +6,10 @@ import org.bukkit.event.player.PlayerListener;
 
 public class DungeonsAndRuinsPluginPlayerListener extends PlayerListener {
 	@SuppressWarnings("unused")
-	private final DungeonsAndRuinsPlugin plugin;
+	private final DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin;
 
     public DungeonsAndRuinsPluginPlayerListener(DungeonsAndRuinsPlugin instance) {
-        plugin = instance;
+        dungeonsAndRuinsPlugin = instance;
     }
     
     /*@Override

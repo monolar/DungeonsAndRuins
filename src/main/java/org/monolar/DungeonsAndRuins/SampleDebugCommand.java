@@ -10,16 +10,16 @@ import org.bukkit.command.CommandSender;
  * @author SpaceManiac
  */
 public class SampleDebugCommand implements CommandExecutor {
-    private final DungeonsAndRuinsPlugin plugin;
+    private final DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin;
 
-    public SampleDebugCommand(DungeonsAndRuinsPlugin plugin) {
-        this.plugin = plugin;
+    public SampleDebugCommand(DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin) {
+        this.dungeonsAndRuinsPlugin = dungeonsAndRuinsPlugin;
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] split) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            plugin.setDebugging(player, !plugin.isDebugging(player));
+            dungeonsAndRuinsPlugin.setDebugging(player, !dungeonsAndRuinsPlugin.isDebugging(player));
 
             return true;
         } else {

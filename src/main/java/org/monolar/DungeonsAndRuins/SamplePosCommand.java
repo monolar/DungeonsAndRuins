@@ -12,10 +12,10 @@ import org.bukkit.command.CommandSender;
  */
 public class SamplePosCommand implements CommandExecutor {
     @SuppressWarnings("unused")
-	private final DungeonsAndRuinsPlugin plugin;
+	private final DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin;
 
-    public SamplePosCommand(DungeonsAndRuinsPlugin plugin) {
-        this.plugin = plugin;
+    public SamplePosCommand(DungeonsAndRuinsPlugin dungeonsAndRuinsPlugin) {
+        this.dungeonsAndRuinsPlugin = dungeonsAndRuinsPlugin;
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] split) {

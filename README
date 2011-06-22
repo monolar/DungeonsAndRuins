@@ -1,0 +1,49 @@
+Dungeons & Ruins is a Bukkit plugin with the goal of making exploring the world
+a little more interesting by placing structures in it.
+
+The Design goal is to have complex but decayed structures being generated along
+with the terrain.
+
+The structures being generated could either be created completely procedurally
+or via templates (i prefer this).
+
+Configuration options should allow admins to determine custom rules and add
+their own templates.
+
+Rules would include factors like:
+  * Biome
+  * Flatness
+  * Probabilities with which to place a structure.
+  * Treasure tables for each templates, maybe even treasure templates being used
+    by templates (e.g. EVIL_CASTLE should contain treasure from the NOTHING_BUT_USELESS_STUFF treasure table.
+  * Maybe an concept of civilization/culture. This would allow having larger areas
+    being part of a setting, e.g. arabic architecture. This would be prodecurally
+    determined as well by not yet known means. This would mainly allow haing many
+    different styles of buildings without mixing them right next to each other.
+
+In case of templates another feature worth considering is tilesets (like in e.g.
+Neverwinter Nights. This would allow having complex structures grow in a meaningful way.
+
+Processing would include steps like
+
+* Flattening/Terraforming:
+    Prepare the correct placement of a structure. This may modify existing terrain,
+    e.g. flatten areas (by raising and lowering).
+* Initial building (intact structure, just like in the template)
+* Decaying:
+    This step actively removes blocks to erode any structure
+* Physics:
+    This step modifies places of blocks to simulate collapses or similar
+* Aging:
+    This step changes blocks into other blocks (but not air) to simulate
+    effects like converting cobble into mossy. This step may also allow placing
+    little plants like flowers, mushrooms or similar
+* Layering/Sedimentation:
+    This could lead to e.g. a maya pyramid being overgrown again, incl. dirt
+    layers. This step allows regrowing trees
+    
+The absolutely necessary steps for an internal 1.0 would be Initial building & Decaying
+All other steps are optional for now and just are there to enhance the atmosphere/believability.
+
+An internal alpha allows placing of simple structures no bigger than one chunk within the borders of a new chunk
+An internal beta allows placing of structures bigger than one chunk in a procedural way.
