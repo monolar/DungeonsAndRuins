@@ -1,6 +1,7 @@
 name: DungeonsAndRuins
 main: org.monolar.DungeonsAndRuins.DungeonsAndRuinsPlugin
 version: 0.1
+load: startup
 commands:
     pos:
         description: blah
